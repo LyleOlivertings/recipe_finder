@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --retro-green: #4a752c;
+  --retro-brown: #6b4f2a;
+  --retro-beige: #e3c598;
+  --retro-accent: #8b9c4a;
+}
+
+/* Retro Components */
+.retro-main-container {
+  @apply min-h-screen bg-retro-green font-press-start text-retro-brown;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.retro-panel {
+  @apply bg-retro-beige border-4 border-retro-brown p-6 text-center;
+}
+
+.retro-title {
+  @apply text-2xl mb-4;
+}
+
+.retro-card {
+  @apply bg-retro-beige border-4 border-retro-brown rounded-lg p-4 
+         hover:shadow-retro transition-all cursor-pointer h-full;
+}
+
+.retro-card-image {
+  @apply w-full h-48 object-cover border-4 border-retro-brown mb-4;
+}
+
+.retro-card-title {
+  @apply text-lg mb-2 line-clamp-2;
+}
+
+.retro-card-details {
+  @apply flex justify-between text-sm;
+}
+
+.retro-search-container {
+  @apply flex gap-2;
+}
+
+.retro-search-input {
+  @apply flex-1 p-2 bg-retro-beige border-4 border-retro-brown 
+         placeholder-retro-brown text-retro-brown;
+}
+
+.retro-search-button {
+  @apply px-4 py-2 bg-retro-accent border-4 border-retro-brown 
+         hover:bg-retro-accent/80 transition-colors;
+}
+
+.retro-loading {
+  @apply text-center py-8 text-retro-brown text-xl flex flex-col items-center gap-2;
+}
+
+.retro-spinner {
+  @apply w-8 h-8 border-4 border-retro-brown border-t-transparent 
+         rounded-full animate-spin;
+}
+
+.retro-empty-state {
+  @apply text-center py-12 text-retro-brown text-xl;
+}
+
+/* Custom Utilities */
+.shadow-retro {
+  box-shadow: 4px 4px 0 var(--retro-brown);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
